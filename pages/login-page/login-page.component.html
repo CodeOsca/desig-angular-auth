@@ -1,0 +1,40 @@
+<main
+    class="d-flex backgroud-auth flex-justify-end">
+    <section>
+        <h1>Accede a tu cuenta</h1>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()" >
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label> Escribe tu email </mat-label>
+                    <input 
+                        type="text" 
+                        matInput
+                        formControlName="email"
+                        placeholder="Escribe tu email" />
+                    <mat-hint *ngIf="fieldInvalid('email')"> {{ emailError }} </mat-hint>    
+                </mat-form-field>
+            </div>
+        
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label> Escribe tu contraseña </mat-label>
+                    <input 
+                        type="password" 
+                        matInput 
+                        formControlName="password"
+                        placeholder="Escribe tu contraseña" />
+                    <mat-hint *ngIf="fieldInvalid('password')"> {{ passwordError }} </mat-hint>        
+                </mat-form-field>
+            </div>
+
+
+            <div class="d-flex flex-justify-between">
+                <button mat-raised-button color="primary">Entar</button>
+                <a routerLink="/auth/registro" mat-raised-button color="warn">Registro</a>
+            </div>
+        </form>
+
+        <mat-divider></mat-divider>
+        
+    </section>
+</main>

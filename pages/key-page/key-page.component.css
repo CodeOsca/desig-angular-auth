@@ -1,0 +1,35 @@
+
+.layout-container {
+    background-image: url("../../../../assets/img/blob.svg"), url("../../../../assets/img/blob.svg");
+    background-repeat: no-repeat;
+    background-position: right -120px bottom 85px, left -156px bottom -35px;
+    background-size: 300px;
+    align-items:center;
+    background-color: #fff;
+    flex-direction: column;
+    padding: 2rem 2em;
+}
+
+.login__image {
+    max-width: 60%;
+    margin-bottom: 5px;
+}
+  
+.login__title {
+    letter-spacing: 0.2;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login__subtitle {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #9793e7;
+}
+    
+@media screen and (min-width: 1024px) {
+    .layout-container {
+        background-position: right -150px bottom -150px, left -300px bottom 70px;
+        background-size: 600px;
+    }
+}

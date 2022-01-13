@@ -1,0 +1,63 @@
+<main
+    class="d-flex backgroud-auth flex-justify-end">
+    <section>
+        <h1>Crea un cuenta</h1>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()" >
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label> Escribe tu nombre </mat-label>
+                    <input 
+                        type="text" 
+                        matInput
+                        formControlName="name"
+                        placeholder="Escribe tu nombre" />
+                    <mat-hint *ngIf="fieldInvalid('name')"> {{ nameError }} </mat-hint>
+                </mat-form-field>
+            </div>
+        
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label> Escribe tu email </mat-label>
+                    <input 
+                        type="text" 
+                        matInput
+                        formControlName="email"
+                        placeholder="Escribe tu email" />
+                    <mat-hint *ngIf="fieldInvalid('email')"> {{ emailError }} </mat-hint>    
+                </mat-form-field>
+            </div>
+        
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label> Escribe tu contraseña </mat-label>
+                    <input 
+                        type="password" 
+                        matInput 
+                        formControlName="password"
+                        placeholder="Escribe tu contraseña" />
+                    <mat-hint *ngIf="fieldInvalid('password')"> {{ passwordError }} </mat-hint>        
+                </mat-form-field>
+            </div>
+        
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label> Confirma tu contraseña </mat-label>
+                    <input 
+                        type="password" 
+                        matInput 
+                        formControlName="passwordConfirm"
+                        placeholder="Confirma tu contraseña" />
+                    <mat-hint *ngIf="fieldInvalid('passwordConfirm')"> {{ passwordConfirmError() }} </mat-hint>            
+                </mat-form-field>
+            </div>
+
+            <div class="d-flex flex-justify-between">
+                <button mat-raised-button color="primary">Registar</button>
+                <a routerLink="/auth/ingresar" mat-raised-button color="warn">Ingresar</a>
+            </div>
+        </form>
+
+        <mat-divider></mat-divider>
+        
+    </section>
+</main>

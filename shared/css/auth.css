@@ -1,0 +1,38 @@
+.backgroud-auth{
+    background-image: 
+    linear-gradient(rgba(140, 106, 72, 0.837) 35%, rgba(0, 153, 150, 0.933)),
+    url('https://images.pexels.com/photos/5025646/pexels-photo-5025646.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: .80rem;
+}
+
+section{
+    background-color: rgba(255, 255, 255, 1);
+    min-height: 100vh;
+    min-width: 350px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-right: 60px;
+}
+
+mat-form-field{
+    display: block;
+    margin-bottom: .30rem;
+}
+
+
+section{
+    padding-top: .3rem;
+}
+
+@media (max-width:700px) {
+    main{
+        justify-content: center;
+        padding-top: 1.2rem;
+    }
+
+    main, section{
+        padding-bottom: 3rem;
+    }
+}
